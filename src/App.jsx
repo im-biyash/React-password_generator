@@ -32,15 +32,16 @@ function App() {
   }, [length, numberAllowed, characterAllowed, passwordGenerator]);
 
   return (
-    <>
-      <div className="max-w-md mx-auto my-8 rounded-lg shadow-md px-4 py-3 text-white bg-gray-600">
+   
+   <>
+      <div className="max-w-md mx-auto my-8 rounded-lg shadow-md px-4 py-3 text-black bg-gray-600">
         <h1 className="text-center text-black-700 text-4xl text-bold "> password Generator</h1>
         <div className="flex shadow-sm rounded-lg overflow-hidden mb-4">
           <input
             type="text"
             value={password}
             className="outline-none
-        w-full px-3 py-1  "
+        w-full px-3 py-1 text-black  "
           />
           <button onClick={copyPassword}>Copy</button>
         </div>
@@ -53,7 +54,7 @@ function App() {
               min={6}
               max={100}
               value={length}
-              className="cursor-pointer"
+              className="cursor-pointer text-black"
               ref={passwordRef}
               onChange={(e) => setLength(parseInt(e.target.value))}
             />
@@ -81,6 +82,7 @@ function App() {
           </div>
         </div>
       </div>
+   
     </>
   );
 }
